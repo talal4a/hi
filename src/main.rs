@@ -34,7 +34,7 @@
 // }
 // fn main(){
 //     let value=5;
-    
+
 // if value>5 {
 //     println!(">5");
 // }
@@ -48,6 +48,32 @@
 //     println!("Nothing found ");
 // }
 // }
-fn main(){
-    
+// fn main(){
+//     let my_name="Ahmed";
+//     match my_name {
+// "Alice"=>println!("not my name"),
+// "Talal"=>println!("This is my name"),
+// _=>println!("Nice to meet you"),
+//     }
+// }
+// fn main(){
+//     let value:bool=true;
+//     match value{
+//  true=>println!("This is true"),
+//  false=>println!("This is false"),
+//     }
+// }
+// fn main(){
+//     let mut i=0;
+// loop {
+//     println!("The value is :{:?}",i);
+//     i=i+1;
+//     if i==4{
+//         break;
+//     }
+// }
+// }
+fn main() {
+
+
 }
