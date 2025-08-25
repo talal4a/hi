@@ -174,4 +174,9 @@
 //     bob.print_detail();
 //     charlie.print_detail();
 // }
-fn main() {}
+fn main() {
+    let value = ("Hello", 5, "Good");
+    println!("{}", value.1);
+    let (name, age) = ("Talal", 21);
+    println!("{},{}", name, age);
+}
