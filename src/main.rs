@@ -73,7 +73,105 @@
 //     }
 // }
 // }
-fn main() {
-
-
-}
+// fn main() {
+//     let mut i = 5;
+//     while i >= 0 {
+//         println!("The value is {:?}", i);
+//         i = i - 1;
+//         if i < 0 {
+//             println!("Done");
+//         }
+//     }
+// }
+// enum Direction {
+//     Left,
+//     Right,
+// }
+// fn main() {
+//     let go = Direction::Left;
+//     match go {
+//         Direction::Left => println!("Go left"),
+//         Direction::Right => println!("Go right"),
+//     }
+// }
+// enum Flavor {
+//     sparkling,
+//     sweet,
+//     fruity,
+// }
+// struct Drink {
+//     flavour: Flavor,
+//     fluid_oz: f64,
+// }
+// fn print(drink: Drink) {
+//     match drink.flavour {
+//         Flavor::fruity => println!("This falvour is fruitty"),
+//         Flavor::sparkling => println!("This flavour is sparkling"),
+//         Flavor::sweet => println!("This falvour is sweet"),
+//     }
+//     println!("The fluid oz is :{}", drink.fluid_oz);
+// }
+// fn main() {
+//     let drink = Drink {
+//         flavour: Flavor::fruity,
+//         fluid_oz: 40.02,
+//     };
+//     print(drink);
+// }
+// enum AccountType {
+//     Savings,
+//     Checkings,
+// }
+// struct BankAccount {
+//     name: String,
+//     account_type: AccountType,
+//     balance: f64,
+// }
+// impl BankAccount {
+//     fn deposit(&mut self, amount: f64) {
+//         self.balance += amount;
+//         println!("Deposited ${} to {}", amount, self.name);
+//     }
+//     fn withdraw(&mut self, amount: f64) {
+//         if self.balance >= amount {
+//             self.balance -= amount;
+//             println!("Withdrew ${} from {}", amount, self.name);
+//         } else {
+//             println!("Insufficient funds for {}", self.name);
+//         }
+//     }
+//     fn print_detail(&self) {
+//         println!("Account: {}", self.name);
+//         match self.account_type {
+//             AccountType::Savings => println!("Type: Savings account"),
+//             AccountType::Checkings => println!("Type: Checking account"),
+//         }
+//         println!("Balance: ${}\n", self.balance);
+//     }
+// }
+// fn main() {
+//     let mut alice = BankAccount {
+//         name: String::from("Alice"),
+//         account_type: AccountType::Savings,
+//         balance: 1200.0,
+//     };
+//     let mut bob = BankAccount {
+//         name: String::from("Bob"),
+//         account_type: AccountType::Checkings,
+//         balance: 500.0,
+//     };
+//     let mut charlie = BankAccount {
+//         name: String::from("Charlie"),
+//         account_type: AccountType::Checkings,
+//         balance: 300.0,
+//     };
+//     alice.print_detail();
+//     bob.print_detail();
+//     charlie.print_detail();
+//     bob.deposit(200.0);
+//     charlie.withdraw(500.0);
+//     alice.print_detail();
+//     bob.print_detail();
+//     charlie.print_detail();
+// }
+fn main() {}
