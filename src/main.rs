@@ -216,7 +216,6 @@ fn main() {
         book_type: BookType::Fiction,
         is_available: false,
     };
-
     stanger_thing.borrow();
     stanger_thing.print_info();
 }
