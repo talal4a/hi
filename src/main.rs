@@ -174,54 +174,61 @@
 //     bob.print_detail();
 //     charlie.print_detail();
 // }
-enum BookType {
-    Fiction,
-    NonFiction,
-    Comics,
-}
-struct Book {
-    title: String,
-    author: String,
-    book_type: BookType,
-    is_available: bool,
-}
-impl Book {
-    fn print_info(&self) {
-        println!("Book :{}", self.title);
-        match self.book_type {
-            BookType::Comics => println!("This Book genre is Comics "),
-            BookType::Fiction => println!(" This Book genre is Fiction"),
-            BookType::NonFiction => println!(" This Book genre is Non Fiction"),
-        }
-        println!("Book author is :{}", self.author);
-        if self.is_available == true {
-            println!("This Book is available");
-        } else {
-            println!("This Book is not available");
-        }
-    }
-    fn borrow(&mut self) {
-        if self.is_available == false {
-            println!("This Book is already borrow");
-        }
-    }
-    fn return_book(&mut self) {
-        self.is_available = true;
-    }
-}
-fn main() {
-    let mut stanger_thing = Book {
-        title: String::from("StangerThing"),
-        author: String::from("Eleven"),
-        book_type: BookType::Fiction,
-        is_available: false,
-    };
-    stanger_thing.borrow();
-    stanger_thing.print_info();
-}
+// enum BookType {
+//     Fiction,
+//     NonFiction,
+//     Comics,
+// }
+// struct Book {
+//     title: String,
+//     author: String,
+//     book_type: BookType,
+//     is_available: bool,
+// }
+// impl Book {
+//     fn print_info(&self) {
+//         println!("Book :{}", self.title);
+//         match self.book_type {
+//             BookType::Comics => println!("This Book genre is Comics "),
+//             BookType::Fiction => println!(" This Book genre is Fiction"),
+//             BookType::NonFiction => println!(" This Book genre is Non Fiction"),
+//         }
+//         println!("Book author is :{}", self.author);
+//         if self.is_available == true {
+//             println!("This Book is available");
+//         } else {
+//             println!("This Book is not available");
+//         }
+//     }
+//     fn borrow(&mut self) {
+//         if self.is_available == false {
+//             println!("This Book is already borrow");
+//         }
+//     }
+//     fn return_book(&mut self) {
+//         self.is_available = true;
+//     }
+// }
+// fn main() {
+//     let mut stanger_thing = Book {
+//         title: String::from("StangerThing"),
+//         author: String::from("Eleven"),
+//         book_type: BookType::Fiction,
+//         is_available: false,
+//     };
+//     stanger_thing.borrow();
+//     stanger_thing.print_info();
+// }
 // fn main() {
 //     let value = ("Hello", 5, "Good");
 //     println!("{}", value.1);
 //     let (name, age) = ("Talal", 21);
 //     println!("{},{}", name, age);
 // }
+fn main() {
+
+
+
+
+    
+}
