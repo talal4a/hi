@@ -238,8 +238,14 @@
 //         println!("=5");
 //     }
 // }
+fn print(gt_100: bool) {
+    match gt_100 {
+        true => println!("The value is big"),
+        false => println!(" The value is small"),
+    }
+}
 fn main() {
     let value = 100;
     let is_gt_100 = value > 100;
-    if value > 100 { true } else { false }
+    print(is_gt_100);
 }
