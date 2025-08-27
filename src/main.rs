@@ -249,24 +249,82 @@
 //     let is_gt_100 = value > 100;
 //     print(is_gt_100);
 // }
-enum Box {
+// #[derive(Debug)]
+// enum Box {
+//     red,
+//     green,
+//     blue,
+// }
+// struct Characteristics {
+//     weight: i32,
+//     color: Box,
+// }
+// impl Characteristics {
+//     fn print(&self) {
+//         println!("The Box is {},color:{:?} ", self.weight, self.color);
+//     }
+// }
+// fn main() {
+//     let value = Characteristics {
+//         weight: 10,
+//         color: Box::green,
+//     };
+//     value.print();
+// }
+
+enum Color {
     red,
     green,
-    blue,
 }
-struct Characteristics {
-    weight: i32,
-    color: Box,
-}
-impl Characteristics {
+impl Color {
     fn print(&self) {
-        println!("The Box is {} ", self.weight);
+        match self {
+            Color::red => println!("This is red"),
+            Color::green => println!("This is green"),
+        }
+    }
+}
+struct Dimensions {
+    width: f64,
+    height: f64,
+    depth: f64,
+}
+impl Dimensions {
+    fn print(&self) {
+        println!("The width is {}", self.width);
+        println!("The height is {}", self.height);
+        println!("The depth is {}", self.depth);
+    }
+}
+struct ShippingBox {
+    color: Color,
+    dimensions: Dimensions,
+    weight: f64,
+}
+impl ShippingBox {
+    fn new(color: Color, dimensions: Dimensions, weight: f64) -> Self {
+        Self {
+            weight,
+            color,
+            dimensions,
+        }
+    }
+    fn print(&self) {
+        self.color.print();
+        self.dimensions.print();
+        println!("The weight is :{}", self.weight);
     }
 }
 fn main() {
-    let value = Characteristics {
-        weight: 10,
-        color: Box::green,
+    let Dimensions = Dimensions {
+        width: 5.0,
+        height: 10.5,
+        depth: 12.6,
     };
-    value.print();
+    let ShippingBox = ShippingBox {
+        color: Color::green,
+        dimensions: Dimensions,
+        weight: 10.0,
+    };
+    ShippingBox.print();
 }
