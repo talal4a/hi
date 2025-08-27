@@ -238,14 +238,35 @@
 //         println!("=5");
 //     }
 // }
-fn print(gt_100: bool) {
-    match gt_100 {
-        true => println!("The value is big"),
-        false => println!(" The value is small"),
+// fn print(gt_100: bool) {
+//     match gt_100 {
+//         true => println!("The value is big"),
+//         false => println!(" The value is small"),
+//     }
+// }
+// fn main() {
+//     let value = 100;
+//     let is_gt_100 = value > 100;
+//     print(is_gt_100);
+// }
+enum Box {
+    red,
+    green,
+    blue,
+}
+struct Characteristics {
+    weight: i32,
+    color: Box,
+}
+impl Characteristics {
+    fn print(&self) {
+        println!("The Box is {} ", self.weight);
     }
 }
 fn main() {
-    let value = 100;
-    let is_gt_100 = value > 100;
-    print(is_gt_100);
+    let value = Characteristics {
+        weight: 10,
+        color: Box::green,
+    };
+    value.print();
 }
