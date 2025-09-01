@@ -272,59 +272,114 @@
 //     value.print();
 // }
 
-enum Color {
-    red,
-    green,
+use core::num;
+
+// enum Color {
+//     red,
+//     green,
+// }
+// impl Color {
+//     fn print(&self) {
+//         match self {
+//             Color::red => println!("This is red"),
+//             Color::green => println!("This is green"),
+//         }
+//     }
+// }
+// struct Dimensions {
+//     width: f64,
+//     height: f64,
+//     depth: f64,
+// }
+// impl Dimensions {
+//     fn print(&self) {
+//         println!("The width is {}", self.width);
+//         println!("The height is {}", self.height);
+//         println!("The depth is {}", self.depth);
+//     }
+// }
+// struct ShippingBox {
+//     color: Color,
+//     dimensions: Dimensions,
+//     weight: f64,
+// }
+// impl ShippingBox {
+//     fn new(color: Color, dimensions: Dimensions, weight: f64) -> Self {
+//         Self {
+//             weight,
+//             color,
+//             dimensions,
+//         }
+//     }
+//     fn print(&self) {
+//         self.color.print();
+//         self.dimensions.print();
+//         println!("The weight is :{}", self.weight);
+//     }
+// }
+// fn main() {
+//     let Dimensions = Dimensions {
+//         width: 5.0,
+//         height: 10.5,
+//         depth: 12.6,
+//     };
+//     let ShippingBox = ShippingBox::new(Color::green, Dimensions, 10.0);
+//     ShippingBox.print();
+// }
+// enum MyType {
+//     Int(i32),
+//     Text(String),
+// }
+// fn print(numbers: Vec<MyType>) {
+//     println!("The legth of the numbers is :{}", numbers.len());
+// }
+// fn main() {
+//     let numbers = vec![
+//         MyType::Int(10),
+//         MyType::Int(20),
+//         MyType::Text("Thrity".to_string()),
+//         MyType::Int(40),
+//     ];
+//     for nums in &numbers {
+//         match nums {
+//             MyType::Int(val) => println!("Integer: {}", val),
+//             MyType::Text(val) => println!("Text: {}", val),
+//         }
+//     }
+//     print(numbers);
+// }
+struct Person {
+    name: String,
+    age: i32,
+    color: String,
 }
-impl Color {
-    fn print(&self) {
-        match self {
-            Color::red => println!("This is red"),
-            Color::green => println!("This is green"),
-        }
-    }
-}
-struct Dimensions {
-    width: f64,
-    height: f64,
-    depth: f64,
-}
-impl Dimensions {
-    fn print(&self) {
-        println!("The width is {}", self.width);
-        println!("The height is {}", self.height);
-        println!("The depth is {}", self.depth);
-    }
-}
-struct ShippingBox {
-    color: Color,
-    dimensions: Dimensions,
-    weight: f64,
-}
-impl ShippingBox {
-    fn new(color: Color, dimensions: Dimensions, weight: f64) -> Self {
-        Self {
-            weight,
-            color,
-            dimensions,
-        }
-    }
-    fn print(&self) {
-        self.color.print();
-        self.dimensions.print();
-        println!("The weight is :{}", self.weight);
-    }
+fn print(person: &Person) {
+    println!(
+        "The person name is {},color is ={}",
+        person.name, person.color
+    );
 }
 fn main() {
-    let Dimensions = Dimensions {
-        width: 5.0,
-        height: 10.5,
-        depth: 12.6,
-    };
-    let ShippingBox = ShippingBox {
-        color: Color::green,
-        dimensions: Dimensions,
-        weight: 10.0,
-    };
-    ShippingBox.print();
+    let people = vec![Person {
+        name: "Talal".to_owned(),
+        age: 21,
+        color: "Blue".to_owned(),
+    }];
+    let people = vec![Person {
+        name: "Ahmed".to_owned(),
+        age: 25,
+        color: "Green".to_owned(),
+    }];
+    let people = vec![Person {
+        name: "Ali".to_owned(),
+        age: 10,
+        color: "yellow".to_owned(),
+    }];
+    for name in &people {
+        if name.age <= 10 {
+            print(&name);
+        } else {
+            println!("Sorry your age is greater then 10");
+        }
+    }
 }
