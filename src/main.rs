@@ -348,38 +348,52 @@ use core::num;
 //     }
 //     print(numbers);
 // }
-struct Person {
-    name: String,
-    age: i32,
-    color: String,
+// struct Person {
+//     name: String,
+//     age: i32,
+//     color: String,
+// }
+// fn print(person: &Person) {
+//     println!(
+//         "The person name is {},color is ={}",
+//         person.name, person.color
+//     );
+// }
+// fn main() {
+//     let people = vec![Person {
+//         name: "Talal".to_owned(),
+//         age: 21,
+//         color: "Blue".to_owned(),
+//     }];
+//     let people = vec![Person {
+//         name: "Ahmed".to_owned(),
+//         age: 25,
+//         color: "Green".to_owned(),
+//     }];
+//     let people = vec![Person {
+//         name: "Ali".to_owned(),
+//         age: 10,
+//         color: "yellow".to_owned(),
+//     }];
+//     for name in &people {
+//         if name.age <= 10 {
+//             print(&name);
+//         } else {
+//             println!("Sorry your age is greater then 10");
+//         }
+//     }
+// }
+struct Student {
+    name: Option<String>,
+    locker: Option<i32>,
 }
-fn print(person: &Person) {
-    println!(
-        "The person name is {},color is ={}",
-        person.name, person.color
-    );
+fn print(){
+    
 }
 fn main() {
-    let people = vec![Person {
-        name: "Talal".to_owned(),
-        age: 21,
-        color: "Blue".to_owned(),
-    }];
-    let people = vec![Person {
-        name: "Ahmed".to_owned(),
-        age: 25,
-        color: "Green".to_owned(),
-    }];
-    let people = vec![Person {
-        name: "Ali".to_owned(),
-        age: 10,
-        color: "yellow".to_owned(),
-    }];
-    for name in &people {
-        if name.age <= 10 {
-            print(&name);
-        } else {
-            println!("Sorry your age is greater then 10");
-        }
-    }
+    let Locker = Student {
+        name: Some("talal".to_owned()),
+        locker: Some(24),
+    };
+
 }
