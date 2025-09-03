@@ -383,17 +383,25 @@ use core::num;
 //         }
 //     }
 // }
+
 struct Student {
     name: Option<String>,
     locker: Option<i32>,
 }
-fn print(){
-    
+fn print(student: &Student) {
+    match &student.name {
+        Some(n) => println!("The name of the student is: {}", n),
+        None => println!("Nothing is shown about the student "),
+    }
+    match &student.locker {
+        Some(n) => println!("The locker number of the student is: {}", n),
+        None => println!("No locker is not exist"),
+    }
 }
 fn main() {
     let Locker = Student {
         name: Some("talal".to_owned()),
         locker: Some(24),
     };
-
+    print(&Locker);
 }
