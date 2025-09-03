@@ -383,7 +383,6 @@ use core::num;
 //         }
 //     }
 // }
-
 struct Student {
     name: Option<String>,
     locker: Option<i32>,
