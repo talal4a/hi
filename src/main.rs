@@ -273,6 +273,7 @@
 // }
 
 use core::num;
+use std::string;
 
 // enum Color {
 //     red,
@@ -409,10 +410,10 @@ struct Adult {
     name: Option<String>,
     age: Option<i32>,
 }
-fn new(age: i32) -> Result<Adult, String> {
+fn new(age: i32,name:&String) -> Result<Adult, String> {
     if age >= 21 {
         Ok(Adult {
-            name: None,
+            name: Some(name.to_owned()),
             age: Some(age),
         })
     } else {
@@ -420,8 +421,8 @@ fn new(age: i32) -> Result<Adult, String> {
     }
 }
 fn main() {
+let person=
 
 
-    
 
 }
