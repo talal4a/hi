@@ -410,7 +410,7 @@ struct Adult {
     name: Option<String>,
     age: Option<i32>,
 }
-fn new(age: i32,name:&String) -> Result<Adult, String> {
+fn new(age: i32, name: &String) -> Result<Adult, String> {
     if age >= 21 {
         Ok(Adult {
             name: Some(name.to_owned()),
@@ -420,9 +420,26 @@ fn new(age: i32,name:&String) -> Result<Adult, String> {
         Err("Age must be at least 21".to_string())
     }
 }
+fn print(person: &Adult) -> Result<String, String> {
+    match person.age {
+        Some(age) =>if age>=21 {
+            Ok(format!("This person  is Adult")),
+        } 
+        Some(age) => Err(format!(
+            "The error is that this person :{} is not adult ",
+            age
+        )),
+        None => Err(format!("Please enter the valid age")),
+    }
+}
 fn main() {
-let person=
-
-
-
+    let person = Adult {
+        name: Some("talal".to_owned()),
+        age: Some(21),
+    };
+    let Person = Adult {
+        name: Some("Ahmed".to_owned()),
+        age: Some(19),
+    };
+    
 }
