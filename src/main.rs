@@ -383,24 +383,40 @@ use core::num;
 //         }
 //     }
 // }
-struct Student {
+// struct Student {
+//     name: Option<String>,
+//     locker: Option<i32>,
+// }
+// fn print(student: &Student) {
+//     match &student.name {
+//         Some(n) => println!("The name of the student is: {}", n),
+//         None => println!("Nothing is shown about the student "),
+//     }
+//     match &student.locker {
+//         Some(n) => println!("The locker number of the student is: {}", n),
+//         None => println!("No locker is not exist"),
+//     }
+// }
+// fn main() {
+//     let Locker = Student {
+//         name: Some("talal".to_owned()),
+//         locker: Some(24),
+//     };
+//     print(&Locker);
+// }
+#[derive(Debug)]
+struct Adult {
     name: Option<String>,
-    locker: Option<i32>,
+    age: Option<i32>,
 }
-fn print(student: &Student) {
-    match &student.name {
-        Some(n) => println!("The name of the student is: {}", n),
-        None => println!("Nothing is shown about the student "),
+fn new(age: i32) -> Result<Adult, String> {
+    if age >= 21 {
+        Ok(Adult {
+            name: None,
+            age: Some(age),
+        })
+    } else {
+        Err("Age must be at least 21".to_string())
     }
-    match &student.locker {
-        Some(n) => println!("The locker number of the student is: {}", n),
-        None => println!("No locker is not exist"),
-    }
 }
-fn main() {
-    let Locker = Student {
-        name: Some("talal".to_owned()),
-        locker: Some(24),
-    };
-    print(&Locker);
-}
+fn main() {}
