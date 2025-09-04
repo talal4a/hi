@@ -419,4 +419,7 @@ fn new(age: i32) -> Result<Adult, String> {
         Err("Age must be at least 21".to_string())
     }
 }
-fn main() {}
+fn main() {
+
+    
+}
