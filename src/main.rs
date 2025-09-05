@@ -438,5 +438,17 @@ use std::string;
 //     println!("{:?}", print(result));
 // }
 use std::collections::HashMap;
-
-fn main() {}
+fn main() {
+    let mut furniture = HashMap::new();
+    furniture.insert(5, "Chairs".to_owned());
+    furniture.insert(3, "Beds".to_owned());
+    furniture.insert(2, "Tables".to_owned());
+    furniture.insert(0, "Couches".to_owned());
+    for (key, _values) in &furniture {
+        if *key == 0 {
+            println!("out of the stock");
+        } else {
+            println!("The stocks are :{},{}", key, _values);
+        }
+    }
+}
