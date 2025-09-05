@@ -451,4 +451,5 @@ fn main() {
             println!("The stocks are :Key {},values{}", key, _values);
         }
     }
+    println!("The total number of stock is :{}", furniture.len());
 }
