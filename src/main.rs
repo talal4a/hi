@@ -446,9 +446,9 @@ fn main() {
     furniture.insert(0, "Couches".to_owned());
     for (key, _values) in &furniture {
         if *key == 0 {
-            println!("out of the stock");
+            println!("Out of the stock:{}", _values);
         } else {
-            println!("The stocks are :{},{}", key, _values);
+            println!("The stocks are :Key {},values{}", key, _values);
         }
     }
 }
