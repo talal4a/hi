@@ -437,19 +437,24 @@ use std::string;
 //     let result = new(21, &"Talal".to_owned());
 //     println!("{:?}", print(result));
 // }
-use std::collections::HashMap;
+// use std::collections::HashMap;
+// fn main() {
+//     let mut furniture = HashMap::new();
+//     furniture.insert(5, "Chairs".to_owned());
+//     furniture.insert(3, "Beds".to_owned());
+//     furniture.insert(2, "Tables".to_owned());
+//     furniture.insert(0, "Couches".to_owned());
+//     for (key, _values) in furniture.iter() {
+//         if *key == 0 {
+//             println!("Out of the stock:{}", _values);
+//         } else {
+//             println!("The stocks are :Key {},values{}", key, _values);
+//         }
+//     }
+//     println!("The total number of stock is :{}", furniture.len());
+// }
 fn main() {
-    let mut furniture = HashMap::new();
-    furniture.insert(5, "Chairs".to_owned());
-    furniture.insert(3, "Beds".to_owned());
-    furniture.insert(2, "Tables".to_owned());
-    furniture.insert(0, "Couches".to_owned());
-    for (key, _values) in &furniture {
-        if *key == 0 {
-            println!("Out of the stock:{}", _values);
-        } else {
-            println!("The stocks are :Key {},values{}", key, _values);
-        }
-    }
-    println!("The total number of stock is :{}", furniture.len());
+    let mut numbers = vec![5, 10, 15];
+    let double: Vec<_> = numbers.iter().map(|a| a * 2).collect();
+    println!("{:?}", double);
 }
