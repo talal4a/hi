@@ -405,35 +405,37 @@ use std::string;
 //     };
 //     print(&Locker);
 // }
-#[derive(Debug)]
-struct Adult {
-    name: Option<String>,
-    age: Option<i32>,
-}
-fn new(age: i32, name: &String) -> Result<Adult, String> {
-    if age >= 21 {
-        Ok(Adult {
-            name: Some(name.to_owned()),
-            age: Some(age),
-        })
-    } else {
-        Err("Age must be at least 21".to_string())
-    }
-}
-fn print(person: Result<Adult, String>) -> Result<String, String> {
-    match person {
-        Ok(adult) => match adult.age {
-            Some(age) if age >= 21 => Ok("This person is Adult".to_string()),
-            Some(age) => Err(format!(
-                "The error is that this person :{} is not adult",
-                age
-            )),
-            None => Err("Please enter a valid age".to_string()),
-        },
-        Err(e) => Err(e),
-    }
-}
-fn main() {
-    let result = new(21, &"Talal".to_owned());
-    println!("{:?}", print(result));
-}
+// #[derive(Debug)]
+// struct Adult {
+//     name: Option<String>,
+//     age: Option<i32>,
+// }
+// fn new(age: i32, name: &String) -> Result<Adult, String> {
+//     if age >= 21 {
+//         Ok(Adult {
+//             name: Some(name.to_owned()),
+//             age: Some(age),
+//         })
+//     } else {
+//         Err("Age must be at least 21".to_string())
+//     }
+// }
+// fn print(person: Result<Adult, String>) -> Result<String, String> {
+//     match person {
+//         Ok(adult) => match adult.age {
+//             Some(age) if age >= 21 => Ok("This person is Adult".to_string()),
+//             Some(age) => Err(format!(
+//                 "The error is that this person :{} is not adult",
+//                 age
+//             )),
+//             None => Err("Please enter a valid age".to_string()),
+//         },
+//         Err(e) => Err(e),
+//     }
+// }
+// fn main() {
+//     let result = new(21, &"Talal".to_owned());
+//     println!("{:?}", print(result));
+// }
+use std::collections::HashMap;
+fn main() {}
