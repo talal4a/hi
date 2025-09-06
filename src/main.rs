@@ -453,8 +453,13 @@ use std::string;
 //     }
 //     println!("The total number of stock is :{}", furniture.len());
 // }
+// fn main() {
+//     let mut numbers = vec![5, 10, 15];
+//     let double: Vec<_> = numbers.iter().map(|a| a * 2).collect();
+//     println!("{:?}", double);
+// }
 fn main() {
-    let mut numbers = vec![5, 10, 15];
-    let double: Vec<_> = numbers.iter().map(|a| a * 2).collect();
-    println!("{:?}", double);
+    let mut numbers = vec![1, 10, 15];
+    let triple: Vec<_> = numbers.iter().map(|a| a * 3).filter(|a| *a > 10).collect();
+    println!("{:?}", triple);
 }
